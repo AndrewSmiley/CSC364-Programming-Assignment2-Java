@@ -1,7 +1,8 @@
 package csc364pa2;
 
 /**
- * Created by pridemai on 6/20/16.
+ * Created by Andrew Smiley on 6/18/16.
+ * Class to represent Heapsort in true Java fashion
  */
 public class HeapSort {
     public int[] getArray() {
@@ -17,30 +18,32 @@ public class HeapSort {
         this.array = array;
     }
     /**
-     * Our build-heap method (this is Java, it's methods not functions
-     * @param n the length of the array
-     * @param i the index
+     * Our build-heap method (this is Java, it's methods not functions)
+     * @param size the length of the array
+     * @param index the index
      */
-    public void heapify(int n, int i){
-        //our max value
-        int max = i;
-        //left and right branches
-        int left = 2 *i+1;
-        int right = 2 *i+2;
-        if(left< n && this.array[max] < this.array[left]){
-            max = left;
-        }
-        if (right < n && this.array[max] < this.array[right]){
-            max = right;
-        }
-        //if the max value is not at the root
-        if(max != i){
-            //swap
-            int temp = this.array[0];
-            this.array[0] =this.array[max];
-            this.array[max]= temp;
+    public void heapify(int size, int index){
+        //our root node
+        int root = index;
+        //left adn right subtrees
+        int left = 2*index + 1;
+        int right = 2*index + 2;
+
+        if (left < size &&   this.array[root]< this.array[left])
+            root = left;
+
+        if (right < size &&  this.array[root] < this.array[right] )
+            root = right;
+
+        // If largest is not root
+        if (root != index)
+        {
+            //do our swap
+            int swap = this.array[root];
+            this.array[root] = this.array[index];
+            this.array[index] = swap;
             //recurse
-            heapify(n, max);
+            heapify(size, root);
         }
 
     }
@@ -49,16 +52,19 @@ public class HeapSort {
      */
     public void doSort(){
         int length = this.array.length;
-        //here we'll build the heap
-        for(int i = length/2-1; i >= 0;i--){
+
+        // Build the heap
+        for (int i = length / 2 - 1; i >= 0; i--)
             heapify(length, i);
-        }
+
         //reduce the heap
-        for(int i = length-1; i >= 0; i--){
-            //and swap, thanks Java, no swap method
+        for (int i=length-1; i>=0; i--)
+        {
             int temp = this.array[0];
-            this.array[0]=this.array[i];
-            this.array[i]=temp;
+            this.array[0] = this.array[i];
+            this.array[i] = temp;
+
+            //rebuild heap
             heapify(i, 0);
         }
 
