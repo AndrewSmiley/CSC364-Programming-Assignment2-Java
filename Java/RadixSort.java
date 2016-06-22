@@ -7,21 +7,33 @@ import java.util.Arrays;
  * Class to represent RadixSort in true Java fashion
  */
 public class RadixSort {
+    public int[] getArray() {
+        return array;
+    }
+
+    public void setArray(int[] array) {
+        this.array = array;
+    }
+
+    private int[] array;
+
+    public RadixSort(int[] array){
+        this.array = array;
+    }
 
     /**
      * This method builds our buckets
      * @param n
      * @param exp
      */
-    public static void radixCount(int[] array, int n, int exp){
+    public void radixCount(int n, int exp){
         int outputBucket[] = new int[n];
         int countBucket[] = new int[10];
         Arrays.fill(countBucket,0);
 
         //these next two iterations build our count bucket
         for (int i = 0; i < n; i++)
-            //added the ternary to put them in the first bucket if they're > 0 (negative)
-            countBucket[ ((array[i]/exp)%10 > 0) ? (array[i]/exp)%10 : 1 ]++;
+            countBucket[ (this.array[i]/exp)%10 ]++;
 
         for (int i = 1; i < 10; i++)
             countBucket[i] += countBucket[i - 1];
@@ -29,24 +41,23 @@ public class RadixSort {
         // fill the output bucket
         for (int i = n - 1; i >= 0; i--)
         {
-            //added the ternary to put them in the first bucket if they're > 0 (negative)
-            outputBucket[countBucket[((array[i]/exp)%10 > 0) ? (array[i]/exp)%10 : 1] - 1] = array[i];
-            countBucket[ Math.abs((array[i]/exp)%10) ]--;
+            outputBucket[countBucket[ (this.array[i]/exp)%10 ] - 1] = this.array[i];
+            countBucket[ (this.array[i]/exp)%10 ]--;
         }
         //overwrite our input array
         for (int i = 0; i < n; i++)
-            array[i] = outputBucket[i];
+            this.array[i] = outputBucket[i];
 
     }
 
     /**
      * This is the actual method to run the sort
      */
-    public static void radixSort(int[] array){
+    public void doSort(){
         int maxSize = Integer.MAX_VALUE;
         //iterate and build our buckets
         for (int exp = 1; maxSize/exp > 0; exp *= 10) {
-            radixCount(array, array.length, exp);
+            radixCount(this.array.length, exp);
         }
         }
 

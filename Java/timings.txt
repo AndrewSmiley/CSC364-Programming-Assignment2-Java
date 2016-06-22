@@ -1,0 +1,45 @@
+================================================
+Heap Sort Outputs
+================================================
+Sorted 100k items
+Time elapsed: 33122000 milliseconds
+
+Unsorted 100k items
+Time elapsed: 14047000 milliseconds
+
+Sorted 200k items
+Time elapsed: 18377000 milliseconds
+
+Unsorted 200k items
+Time elapsed: 28767000 milliseconds
+
+================================================
+Insertion Sort Outputs
+================================================
+Sorted 100k items
+Time elapsed: 3662000 milliseconds
+
+Unsorted 100k items
+Time elapsed: 4861177000 milliseconds
+
+Sorted 200k items
+Time elapsed: 528000 milliseconds
+
+Unsorted 200k items
+Time elapsed: 9780226000 milliseconds
+
+================================================
+Radix Sort Outputs
+================================================
+Sorted 100k items
+Time elapsed: 36 milliseconds
+
+Unsorted 100k items
+Time elapsed: 17 milliseconds
+
+Sorted 200k items
+Time elapsed: 41 milliseconds
+
+Unsorted 200k items
+Time elapsed: 36 milliseconds
+

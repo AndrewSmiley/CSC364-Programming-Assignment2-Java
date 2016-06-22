@@ -1,45 +1,36 @@
-================================================
-Heap Sort Outputs
-================================================
-Sorted 100k items
-Time elapsed: 16611000 milliseconds
+Insertion sort runtime on ordered array of length 100000:  4 milliseconds
+Insertion sort verified.
 
-Unsorted 100k items
-Time elapsed: 13187000 milliseconds
+Insertion sort runtime on random  array of length 100000:  4695 milliseconds
+Insertion sort verified.
 
-Sorted 200k items
-Time elapsed: 21614000 milliseconds
+Heap sort runtime on ordered array of length 100000:  15 milliseconds
+Heap sort verified.
 
-Unsorted 200k items
-Time elapsed: 28321000 milliseconds
+Heap sort runtime on random  array of length 100000:  13 milliseconds
+Heap sort verified.
 
-================================================
-Insertion Sort Outputs
-================================================
-Sorted 100k items
-Time elapsed: 2980000 milliseconds
+Radix sort runtime on ordered array of length 100000:  40 milliseconds
+Radix sort verified.
 
-Unsorted 100k items
-Time elapsed: 4852433000 milliseconds
+Radix sort runtime on random  array of length 100000:  19 milliseconds
+Radix sort verified.
 
-Sorted 200k items
-Time elapsed: 399000 milliseconds
+Insertion sort runtime on ordered array of length 200000:  0 milliseconds
+Insertion sort verified.
 
-Unsorted 200k items
-Time elapsed: 9997181000 milliseconds
+Insertion sort runtime on random  array of length 200000:  9481 milliseconds
+Insertion sort verified.
 
-================================================
-Radix Sort Outputs
-================================================
-Sorted 100k items
-Time elapsed: 32 milliseconds
+Heap sort runtime on ordered array of length 200000:  22 milliseconds
+Heap sort verified.
 
-Unsorted 100k items
-Time elapsed: 20 milliseconds
+Heap sort runtime on random  array of length 200000:  27 milliseconds
+Heap sort verified.
 
-Sorted 200k items
-Time elapsed: 43 milliseconds
+Radix sort runtime on ordered array of length 200000:  37 milliseconds
+Radix sort verified.
 
-Unsorted 200k items
-Time elapsed: 38 milliseconds
+Radix sort runtime on random  array of length 200000:  39 milliseconds
+Radix sort verified.
 

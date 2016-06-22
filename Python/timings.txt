@@ -1,0 +1,46 @@
+=========================
+Insertion Sort Outputs
+=========================
+Ordered List of 100k
+Time elapsed: 1420.74489594 seconds 
+
+Unordered List of 200k
+Time elapsed: 2993.66307259 seconds 
+
+Ordered List of 200k
+Time elapsed: 2983.18481445 seconds 
+
+Unordered List of 100k
+Time elapsed: 1386.85679436 seconds 
+
+=========================
+Heap Sort Outputs
+=========================
+Ordered List of 100k
+Time elapsed: 1348.73700142 seconds 
+
+Unordered List of 200k
+Time elapsed: 2962.77713776 seconds 
+
+Ordered List of 200k
+Time elapsed: 2969.22516823 seconds 
+
+Unordered List of 100k
+Time elapsed: 1419.70586777 seconds 
+
+=========================
+Radix Sort Outputs
+=========================
+Ordered List of 100k
+Time elapsed: 1940.38891792 seconds 
+
+Unordered List of 200k
+Time elapsed: 4631.64496422 seconds 
+
+Ordered List of 200k
+Time elapsed: 3956.00509644 seconds 
+
+Unordered List of 100k
+Time elapsed: 2192.05594063 seconds 
+
+
